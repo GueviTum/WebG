@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seguridad para Bancos - G3S PERÚ SECURITY S.A.C</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/img3s.png" type="image/jpeg">
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(135deg, #00097c 0%, #00123a 35%, #2b0000 70%, #C20A00 100%);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      flex: 1;
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.95);
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Flex contenido */
+    .contenido-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .texto {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    h2 {
+      color: #00097c;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Imagen */
+    .imagen {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .imagen img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .imagen img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-regresar {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #C20A00;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-regresar:hover {
+      background: #00097c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #00097c 0%, #00123a 35%, #2b0000 70%, #C20A00 100%);
+      color: white;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-top: 40px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .contenido-flex {
+        flex-direction: column;
+      }
+      .imagen, .texto {
+        min-width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Seguridad para Bancos</h1>
+</header>
+
+<main>
+
+  <div class="contenido-flex">
+
+    <!-- Texto -->
+    <div class="texto">
+      <h2>Protección y Control en Entidades Financieras</h2>
+      <p>Ofrecemos servicios de vigilancia, control de accesos y protección patrimonial para bancos y entidades financieras, garantizando la seguridad de clientes, personal y activos.</p>
+
+      <p>Nuestro equipo capacitado implementa protocolos de prevención de riesgos, monitoreo en tiempo real y medidas de respuesta inmediata ante cualquier incidente, asegurando un entorno seguro y confiable.</p>
+
+      <a href="servicios.html" class="btn-regresar">← Regresar a Servicios</a>
+    </div>
+
+    <!-- Imagen -->
+    <div class="imagen">
+      <img src="img/bank.png" alt="Seguridad en Bancos">
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  © 2025 G3S PERÚ SECURITY S.A.C<br>
+  Servicios de seguridad • Vigilancia • Prevención de Riesgos<br>
+  cotizacionn@g3speru.com  | Tel: (044) 608306
+</footer>
+
+</body>
+</html>

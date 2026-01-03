@@ -1,0 +1,837 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* ---------- RESETEO GENERAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #00097c;
+}
+
+/* ---------- MARCA DE AGUA ---------- */
+
+body {
+  position: relative; 
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/G3S-Security\ SAC.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45%;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+
+/* ---------- ENCABEZADO ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: #00097c;
+  color: white;
+  border-bottom: 4px solid #C20A00; /* ← Igual que el footer */
+}
+
+
+.logo img {
+  height: 90px;
+  width: auto;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;            
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.activo {
+  color: #C20A00;              
+}
+
+/* separadores */
+.navbar li {
+  position: relative;
+}
+
+.navbar li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -13px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 18px;
+  background-color: #ffffff;
+}
+
+/* ---------- SECCIÓN INICIO ---------- */
+.inicio {
+  height: 71vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  position: relative;
+}
+
+
+.inicio-texto {
+  max-width: 700px;
+  text-align: left;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.inicio-texto h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #C20A00;  /* mejor contraste */
+  text-shadow: 0 4px 6px rgba(0,0,0,0.6);
+}
+
+.inicio-texto p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  color: #00097c;
+  font-weight: bold;
+  text-shadow: 0 2px 6px rgba(255,255,255,0.6);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #00097c;
+  color: white;
+  text-align: center;
+  padding: 17px 0;
+}
+
+
+
+/* ---------- SECCIÓN NOSOTROS (MEJORADA) ---------- */
+
+#nosotros {
+  padding: 90px 120px;
+  background: #ffffff;
+  color: #00097c;
+}
+
+/* Títulos principales */
+#nosotros h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 30px;
+  color: #00097c;
+}
+
+/* Línea decorativa roja */
+#nosotros h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 70px;
+  height: 5px;
+  background-color: #C20A00;
+  border-radius: 3px;
+}
+
+/* Contenedor general */
+.contenido-nosotros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+/* Texto */
+.texto-nosotros {
+  flex: 1 1 50%;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  text-align: justify;
+  padding-right: 20px;
+}
+
+/* Palabras resaltadas */
+.texto-nosotros strong {
+  color: #C20A00;
+  font-weight: 700;
+}
+
+/* Imagen */
+.imagen-nosotros {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.imagen-nosotros img {
+  width: 70%;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-nosotros img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.25);
+}
+
+/* ---------- BLOQUES DE MISIÓN Y VISIÓN ---------- */
+
+#nosotros .bloque-info {
+  background: #f7f8ff;
+  padding: 40px 35px;
+  border-left: 5px solid #C20A00;
+  border-radius: 12px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform .3s ease;
+}
+
+#nosotros .bloque-info:hover {
+  transform: translateY(-4px);
+}
+
+/* Texto dentro del bloque */
+#nosotros .bloque-info p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+/* ---------- CARRUSEL DE IMÁGENES ---------- */
+
+.carrusel {
+  display: flex;
+  justify-content: center;
+  gap: px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.carrusel img {
+  width: 240px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow .3s ease;
+}
+
+.carrusel img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+}
+
+
+
+
+/* ---------- FOOTER UNIFICADO ---------- */
+footer {
+  background-color: #00097c;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  margin-top: 80px;
+}
+
+footer a {
+  color: #C20A00;
+  text-decoration: none;
+}
+
+
+.titulo-servicios {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #00097c;
+  color: white;
+}
+
+.titulo-servicios h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.titulo-servicios p {
+  font-size: 1.2rem;
+}
+
+/* ===== ESTILO SEGURIDAD PRIVADA CORPORATIVA ===== */
+
+/* SECCIÓN GENERAL */
+#servicios {
+  padding: 90px 10%;
+  background: #f3f5fa;
+  position: relative;
+  overflow: hidden;
+}
+
+/* TEXTURA FONDO TIPO “SEGURIDAD” */
+#servicios::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("img/pattern-security.png");
+  opacity: 0.07;
+}
+
+/* TITULO PRINCIPAL */
+#servicios h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #00097c;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+/* LÍNEA TÁCTICA ROJA */
+#servicios h2::after {
+  content: "";
+  width: 110px;
+  height: 6px;
+  background: #C20A00;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(194,10,0,0.4);
+}
+
+/* GRID CORPORATIVO */
+.servicios-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 50px;
+  margin-top: 60px;
+}
+
+/* TARJETA ESTILO "ESCUDO" */
+.servicio-card {
+  background: #ffffff;
+  padding: 35px 28px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid #e5e7f1;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+  transition: 0.35s ease;
+  position: relative;
+}
+
+/* BORDE SUPERIOR TÁCTICO */
+.servicio-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: #00097c;
+  border-radius: 14px 14px 0 0;
+  transition: 0.3s ease;
+}
+
+/* EFECTO HOVER PROFESIONAL */
+.servicio-card:hover {
+  transform: translateY(-10px);
+  border-color: #00097c;
+  box-shadow: 0 22px 45px rgba(0,0,0,0.25);
+}
+
+.servicio-card:hover::before {
+  background: #C20A00;
+}
+
+/* ICONO ESTILO CORPORATIVO */
+.servicio-icono {
+  width: 85px;
+  height: 85px;
+  background: #001b4e;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0,27,78,0.4);
+  border: 3px solid #ffffff;
+}
+
+.servicio-icono img {
+  width: 42px;
+  filter: brightness(0) invert(1);
+}
+
+/* TITULOS */
+.servicio-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  color: #00097c;
+}
+
+/* DESCRIPCIÓN */
+.servicio-card p {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* ===============================
+   CONTACTO – Unificado a SERVICIOS
+================================ */
+
+/* Fondo general */
+.contacto-container {
+  padding: 90px 10%;
+  background: #f3f5fa;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Textura igual a servicios */
+.contacto-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("img/pattern-security.png");
+  opacity: 0.07;
+}
+
+/* Título */
+.contacto-container h2,
+.redes-container h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #00097c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* Línea táctica roja */
+.contacto-container h2::after,
+.redes-container h2::after {
+  content: "";
+  width: 110px;
+  height: 6px;
+  background: #C20A00;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(194,10,0,0.4);
+}
+
+/* Descripción */
+.descripcion-contacto {
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 780px;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* GRID */
+.contacto-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 40px;
+}
+
+/* Tarjetas iguales a servicios */
+.contacto-card {
+  background: #ffffff;
+  padding: 35px 28px;
+  border-radius: 14px;
+  border: 2px solid #e5e7f1;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Borde superior táctico */
+.contacto-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: #00097c;
+  border-radius: 14px 14px 0 0;
+  transition: 0.3s ease;
+}
+
+.contacto-card:hover {
+  transform: translateY(-10px);
+  border-color: #00097c;
+  box-shadow: 0 22px 45px rgba(0,0,0,0.25);
+}
+
+.contacto-card:hover::before {
+  background: #C20A00;
+}
+
+/* Títulos */
+.contacto-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  color: #00097c;
+}
+
+/* Texto */
+.contacto-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+  display: inline-block;
+  margin-top: 45px;
+  background: #25D366;
+  color: white;
+  padding: 16px 36px;
+  border-radius: 60px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-6px);
+  background: #16b95a;
+}
+
+/* REDES */
+.redes-container {
+  padding: 90px 10%;
+  background: #eef1ff;
+}
+
+/* Botón redes */
+.btn-redes {
+  display: inline-block;
+  background: #00097c;
+  padding: 16px 32px;
+  color: white;
+  font-size: 1.15rem;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+  transition: 0.3s;
+}
+
+.btn-redes:hover {
+  transform: translateY(-6px);
+  background: #020d88;
+}
+
+
+/* -------------------------
+   PÁGINAS DE SERVICIO: ESTILO GENERAL
+-------------------------- */
+
+.pagina-servicio {
+  padding: 40px 60px;
+  max-width: 1100px;
+  margin: auto;
+  color: #00097c;
+  animation: fadeIn .6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.titulo-servicio {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.titulo-servicio::after {
+  content: "";
+  width: 110px;
+  height: 5px;
+  background: #C20A00;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  border-radius: 3px;
+}
+
+.descripcion-servicio {
+  margin: 30px 0;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 850px;
+}
+
+.subtitulo-servicio {
+  margin-top: 45px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00097c;
+}
+
+.lista-servicio {
+  margin-top: 20px;
+  padding-left: 22px;
+}
+
+.lista-servicio li {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* -------------------------
+   GALERÍA DE SERVICIO
+-------------------------- */
+
+.galeria-servicio {
+  margin-top: 30px;
+  display: grid;
+  justify-content: center;
+}
+
+.galeria-servicio img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.galeria-servicio img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.32);
+}
+
+/* -------------------------
+   BOTÓN VOLVER
+-------------------------- */
+
+.volver-contenedor {
+  margin-top: 50px;
+}
+
+.btn-volver {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #00097c;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: .3s ease;
+}
+
+.btn-volver:hover {
+  background: #0613a3;
+  transform: translateX(-6px);
+}
+
+/* -------------------------
+   RESPONSIVE
+-------------------------- */
+
+@media (max-width: 768px) {
+  .pagina-servicio {
+    padding: 25px;
+  }
+
+  .descripcion-servicio {
+    font-size: 1.15rem;
+  }
+
+  .titulo-servicio {
+    font-size: 1.7rem;
+  }
+
+  .subtitulo-servicio {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+
+/* -------------------------
+   SECCIÓN MISIÓN / VISIÓN
+-------------------------- */
+
+.pagina-servicio {
+  padding: 60px 8%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  color: #00097c;
+  font-weight: 800;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.titulo-seccion::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin-top: 10px;
+  background-color: #C20A00;
+  border-radius: 5px;
+}
+
+/* Layout general */
+.contenido-servicio {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+/* Invertir Visión (imagen izquierda) */
+.vision-invertido {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.vision-invertido .galeria-servicio {
+  order: -1;
+}
+
+.texto-servicio p {
+  text-align: justify;
+  margin-bottom: 18px;
+  line-height: 1.75;
+  color: #222;
+  font-size: 1.1rem;
+}
+
+/* Imagen */
+.galeria-servicio img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.galeria-servicio img:hover {
+  transform: scale(1.03);
+}
+
+/* Botón volver */
+.btn-volver {
+  display: inline-block;
+  margin-top: 12px;
+  background-color: #00097c;
+  color: #fff;
+  padding: 13px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.btn-volver:hover {
+  background-color: #C20A00;
+}
+
+/* -------------------------
+   BOTONES NOSOTROS
+-------------------------- */
+
+.botones-nosotros {
+  margin: 25px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-nosotros {
+  background-color: #00097c;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn-nosotros:hover {
+  background-color: #1420ff;
+}
+
+/* -------------------------
+   RESPONSIVE
+-------------------------- */
+
+@media screen and (max-width: 900px) {
+  .contenido-servicio,
+  .vision-invertido {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .vision-invertido .galeria-servicio {
+    order: 0;
+  }
+
+  .texto-servicio p {
+    text-align: left;
+  }
+}
